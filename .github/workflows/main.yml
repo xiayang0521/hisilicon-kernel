@@ -16,8 +16,9 @@ jobs:
 
       - name: Install dependencies
         run: |
+          sudo add-apt-repository ppa:ubuntu-toolchain-r/test
           sudo apt update
-          sudo apt install make imagemagick gcc-arm-linux-gnueabi
+          sudo apt install make imagemagick gcc-arm-linux-gnueabi  gcc-11 g++-11
 
       - name: Download toolchain
         run: |
